@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InterviewQuestions.Data_Structures;
+using System;
 
 namespace InterviewQuestions
 {
@@ -70,6 +71,39 @@ namespace InterviewQuestions
             suffixTree = new SuffixTree(suffixText);
             suffixTree.OutputSuffixes();
             Console.WriteLine("Longest repeating substring: " + suffixTree.LongestRepeatingSubstring());
+
+            Console.WriteLine();
+            Console.WriteLine(" Array Based Stack");
+            Console.WriteLine("===================");
+            ArrayBackedStack arrayBackedStack = new ArrayBackedStack(10);
+            Console.WriteLine("Is Empty: " + (arrayBackedStack.Empty() ? "Yes" : "No"));
+            string stackItem1 = "First";
+            string stackItem2 = "Second";
+            string stackItem3 = "Third";
+
+            arrayBackedStack.Push(stackItem1);
+            arrayBackedStack.Push(stackItem2);
+            arrayBackedStack.Push(stackItem1);
+            arrayBackedStack.Push(stackItem3);
+            arrayBackedStack.Push(stackItem1);
+            arrayBackedStack.Push(stackItem2);
+            arrayBackedStack.Push(stackItem1);
+            arrayBackedStack.Push(stackItem2);
+            arrayBackedStack.Push(stackItem1);
+            arrayBackedStack.Push(stackItem2);
+            arrayBackedStack.Push(stackItem1);
+            arrayBackedStack.Push(stackItem2);
+
+            Console.WriteLine("Full: " + (arrayBackedStack.Full() ? "YES" : "NO"));
+            Console.WriteLine(arrayBackedStack);
+            string poppedItem1 = (string)arrayBackedStack.Pop();
+            Console.WriteLine("Popped: " + poppedItem1);
+            Console.WriteLine(arrayBackedStack);
+            string peekedItem1 = (string)arrayBackedStack.Peek();
+            Console.WriteLine("Peeked: " + peekedItem1);
+            Console.WriteLine(arrayBackedStack);
+            Console.WriteLine("Full: " + (arrayBackedStack.Full() ? "YES" : "NO"));
+
 
             Console.WriteLine("\nPress enter to continue");
             Console.ReadLine();
