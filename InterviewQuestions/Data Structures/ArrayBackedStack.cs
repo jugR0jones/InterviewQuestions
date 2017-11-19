@@ -19,6 +19,7 @@ namespace InterviewQuestions.Data_Structures
 
         public ArrayBackedStack(int size)
         {
+            _stack = new object[size];
             _maximumCount = size;
             this.Clear();
         }
@@ -28,7 +29,6 @@ namespace InterviewQuestions.Data_Structures
         // Clear all items from the stack
         public void Clear()
         {
-            _stack = new object[_maximumCount];
             _stackPointer = 0;
         }
 
