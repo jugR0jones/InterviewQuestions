@@ -1,4 +1,5 @@
 ﻿using InterviewQuestions.Data_Structures;
+using InterviewQuestions.Sorting;
 using System;
 
 namespace InterviewQuestions
@@ -104,6 +105,7 @@ namespace InterviewQuestions
             Console.WriteLine(arrayBackedStack);
             Console.WriteLine("Full: " + (arrayBackedStack.Full() ? "YES" : "NO"));
 
+            SortingDemo.Run();
 
             Console.WriteLine("\nPress enter to continue");
             Console.ReadLine();
